@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>"16-1 užduotis automobiliai"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>  
+
+        function onFormSubmit() {
+            var elem = document.querySelector('button');
+            elem.setAttribute('disabled', '');
+            var elementas = document.getElementById('p1');
+            elementas.innerHTML = 'Atstumas ' + document.forms['forma']['atstumas'].value +
+                ' ir laikas ' + document.forms['forma']['laikas'].value;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="forma" action="" onsubmit="return onFormSubmit()">
+        <input name="atstumas" type="number">
+        <input name="laikas" type="number">
+        <button>Saugoti</button>
+    </form>
+
+    <div id="p1"></div>
+</body>
+
+</html>
